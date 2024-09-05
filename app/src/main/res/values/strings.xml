@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Multiple-Printer</string>
+    <string-array name="printing_methods">
+        <item>Graphic Printing</item>
+        <item>Text Printing</item>
+
+    </string-array>
+    <string name="spinner_hint">Select printing method</string>
+
+</resources>

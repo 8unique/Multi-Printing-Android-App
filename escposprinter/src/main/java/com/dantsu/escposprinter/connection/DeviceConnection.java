@@ -1,9 +1,5 @@
 package com.dantsu.escposprinter.connection;
 
-import static android.content.ContentValues.TAG;
-
-import android.util.Log;
-
 import com.dantsu.escposprinter.exceptions.EscPosConnectionException;
 
 import java.io.IOException;

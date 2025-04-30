@@ -1,2 +1,2 @@
 include ':app', ':escposprinter'
-rootProject.name='ThermalPrinter'
+rootProject.name='MultiplePrintings'

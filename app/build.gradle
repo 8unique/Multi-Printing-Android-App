@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 34
     defaultConfig {
+        namespace 'com.dantsu.thermalprinter'
         applicationId "com.dantsu.thermalprinter"
         minSdkVersion 19
         targetSdkVersion 34

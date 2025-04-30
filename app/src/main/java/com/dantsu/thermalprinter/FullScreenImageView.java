@@ -2,6 +2,7 @@ package com.dantsu.thermalprinter;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -48,7 +49,7 @@ public class FullScreenImageView {
         iPaxGLPage = PaxGLPage.getInstance(context);
 //        IPage page = iPaxGLPage.createPage();
         this.page = iPaxGLPage.createPage();
-
+        disableSystemFontScaling();
         /*page.setTypefaceObj(Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf"));
 
         page.addLine().addUnit(" ", FONT_NORMAL);
@@ -66,7 +67,7 @@ public class FullScreenImageView {
 
 
 //        page.addLine().addUnit(getImageFromAssetsFile("logo.png"), EAlign.CENTER);
-        page.setTypefaceObj(Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf"));
+       // page.setTypefaceObj(Typeface.createFromAsset(context.getAssets(), "Roboto-Regular.ttf"));
         page.addLine().addUnit(" ", FONT_SMALL);
 
         String currentDate = dateFormat.format(new Date());
@@ -240,6 +241,16 @@ public class FullScreenImageView {
         } catch (WriterException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    private void disableSystemFontScaling() {
+        try {
+            Configuration configuration = context.getResources().getConfiguration();
+            configuration.fontScale = 0.5f;
+            context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

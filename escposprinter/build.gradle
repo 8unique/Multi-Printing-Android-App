@@ -7,6 +7,7 @@ def libraryVersionCode = 3003000
 def libraryVersionName = "3.3.0"
 
 android {
+    namespace 'com.dantsu.escposprinter'
     compileSdkVersion 33
 
     defaultConfig {
@@ -50,9 +51,7 @@ afterEvaluate {
                     name = 'Android library for ESC/POS Thermal Printer'
                     description = 'Useful library to help Android developers to print with (Bluetooth, TCP, USB) ESC/POS thermal printers.'
                 }
-                afterEvaluate {
-                    from components.release
-                }
+
             }
         }
     }

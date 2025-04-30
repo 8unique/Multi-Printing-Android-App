@@ -199,9 +199,9 @@ public class MainActivity extends AppCompatActivity {
             String selectedMethod = spinnerPrintingMethod.getSelectedItem().toString();
 
             if ("Graphic Printing".equals(selectedMethod)) {
-                bigImagePrinting(Connect.getBluetoothDevice(MainActivity.this, "02:08:1D:C2:5E:95"));
+                bigImagePrinting(Connect.getBluetoothDevice(MainActivity.this, "74:F0:7D:E2:D2:2D"));
             } else if ("Text Printing".equals(selectedMethod)) {
-                textPrint(Connect.getBluetoothDevice(MainActivity.this, "02:08:1D:C2:5E:95"));
+                textPrint(Connect.getBluetoothDevice(MainActivity.this, "74:F0:7D:E2:D2:2D"));
             }
         });
     }
